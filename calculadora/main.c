@@ -4,21 +4,22 @@
 #include <locale.h>
 int main(int argc, char *argv[])
 {
-	char resultado, resultado2;
-    int op, c=0, c2=0;
-	float x=0, y=0, r=0, resto=0, r2=0, resultadoo;
+	char resultado, resultado3;
+    int op=0, c=0, c2=0, n=0;
+	float x=0, y=0, r=0, resto=0, r2=0, resultado2=0;
 	setlocale(LC_ALL, "portuguese");
     do
 	{
     	system("color 0f");
     	system("cls");
-   		printf("----------CALCULADORA----------\t\n Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR\n  ");
+   		printf("----------CALCULADORA----------\t\n Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR\n   5 para Encerrar.  ");
     	scanf(" %d", &op);
     
     	switch(op)
     	{
     	    case 1:
     	    {
+    	    	
     	    	printf("\nSomando...\n\n");
     	    	printf("Digite o primeiro numero: ");
     			scanf(" %f", &x);
@@ -37,6 +38,7 @@ int main(int argc, char *argv[])
 	        }
 	        case 2:
 	        {
+	        	
 	        	printf("\nSubtraindo...\n\n");
 	        	printf("Digite o primeiro numero: ");
 	    		scanf(" %f", &x);
@@ -55,6 +57,7 @@ int main(int argc, char *argv[])
 	        }
 	        case 3:
 	        {
+	        	
 	        	printf("\nMultiplicando...\n\n");
 	        	printf("Digite o primeiro numero: ");
 	    		scanf(" %f", &x);
@@ -73,6 +76,7 @@ int main(int argc, char *argv[])
 	        }
 	        case 4:
 	        {
+	        	
 	        	printf("\nDividindo...\n\n");
 	        	printf("Digite o primeiro numero: ");
 	    		scanf(" %f", &x);
@@ -89,6 +93,12 @@ int main(int argc, char *argv[])
 					}
 	            break;
 	        }
+	        case 5:
+	        {
+	        	printf("encerrando a calculadora\n");
+	        	c=c+1;
+	        	break;
+			}	
 	        default:
 	       	{
 	       		c=c+1;
@@ -97,125 +107,123 @@ int main(int argc, char *argv[])
 	        	break;
 	        }
 		}
+		resultado2=resultado2+r;
 		if(c==0)
 		{
-	        printf("voce quer continuar calculando com o resultado anterior? s ou n\n");
+	        printf("\nvoce quer continuar calculando com o resultado anterior? s ou n\n");
 	        scanf(" %c", &resultado);
 	        system("cls");
 	        switch(resultado)
 	        {
 	        	case 's':
 	        	{
-	        		int n;
-	        		while(n!=0)
+	        		while(n!=1)
 					{
-						int n=0, op=0;
-						printf("----------CALCULADORA----------\t\nValor atual: %.2f Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR\n  ", r);
-	    				scanf(" %d", &op);
-	    				switch(op)
+						system("cls");
+						int op2;
+						printf("----------CALCULADORA----------\t\nValor atual: %.2f Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR\n  5 para Encerrar\n", resultado2);
+	    				scanf(" %d", &op2);
+	    				switch(op2)
 	    				{
 	        			case 1:
 	        			{
-		        		printf("\nSomando...\n\n");
-	    		    	printf("%.2f+", r);
-	   			 		scanf(" %f", &y);
-	        		    r=r+y;
+		        			printf("\nSomando...\n\n");
+	    		    		printf("%.2f+", resultado2);
+	   			 			scanf(" %f", &y);
+	        		    	resultado2=resultado2+y;
 	            			if(fmod(r, 2)==0)
 							{
-	            				printf("Novo resultado %.0f\n", r);
-	            				system("pause");
+	            				printf("Novo resultado %.0f\n", resultado2);
 							}
 							else
 							{
-								printf("Novo resultado %.2f\n", r);
-								system("pause");
+								printf("Novo resultado %.2f\n", resultado2);
 							}
 	            			break;
 	        			}
 	        			case 2:
 	        			{
 	        				printf("\nSubtraindo...\n\n");
-	        				printf("%.2f-", r);
+	        				printf("%.2f-", resultado2);
 	    					scanf(" %f", &y);
-	        			    r=r-y;
+	        			    resultado2=resultado2-y;
 	        		   		if(fmod(r, 2)==0)
 							{
-	          			  		printf("Novo resultado %.0f\n", r);
-	            				system("pause");
+	          			  		printf("Novo resultado %.0f\n", resultado2);
 							}
 							else
 							{
-								printf("Novo resultado %.2f\n", r);
-								system("pause");
+								printf("Novo resultado %.2f\n", resultado2);
 							}
 						break;
 	        			}
 	        			case 3:
 	        			{
 	        				printf("\nMultiplicando...\n\n");
-	       					printf("%.2f*", r);
+	       					printf("%.2f*", resultado2);
 	       					scanf(" %f", &y);
-	      				    r=r*y;
+	      				    resultado2=resultado2*y;
 	        		    	if(fmod(r, 2)==0)
 							{
-	        		    		printf("Novo resultado %.0f\n", r);
-	        		    		system("pause");
+	        		    		printf("Novo resultado %.0f\n", resultado2);
 							}
 							else
 							{
-								printf("Novo resultado %.2f\n", r);
-								system("pause");
+								printf("Novo resultado %.2f\n", resultado2);
 							}
 						break;
 	      				 }
 	      				case 4:
 	      				{
 	       					printf("\nDividindo...\n\n");
-	        				printf("%.2f/", r);
+	        				printf("%.2f/", resultado2);
 	    					scanf(" %f", &y);
-	            			r=r/y;
+	            			resultado2=resultado2/y;
 	            			if(fmod(r, 2)==0)
 							{
-	            				printf("Novo resultado %.0f\n", r);
-	            				system("pause");
+	            				printf("Novo resultado %.0f\n", resultado2);
 							}
 							else
 							{
-								printf("Novo resultado %.2f\n", r);
-								system("pause");
+								printf("Novo resultado %.2f\n", resultado2);
 							}
 	         		   	break;
+	         		   	case 5:
+	        			{
+	        				c2=c2+1;
+	        				printf("encerrando a calculadora\n");
+	        				op=5;
+	        				n++;
+	        				break;
+						}		
 	        			}
 	        			default:
 	        				{
 	        					c2=c2+1;
 	        				printf("\nOpção invalida\n");
 	        				system("pause");
+	        				system("cls");
 	        				break;
 	        				}
 						}
 						if(c2==0)
 						{
-						printf("voce quer continuar calculando com o resultado anterior? s ou n\n");
-						scanf(" %c", resultado2);
-							switch(resultado2)
+							printf("voce quer continuar calculando com o resultado anterior? s ou n\n");
+							scanf(" %c", &resultado3);
+							switch(resultado3)
 							{
 								case 's':
 								{
-									r=resultadoo;
+									system("cls");
 									break;
 								}
 								case 'n':
 								{
-									n=n+1;
+									system("cls");
+									n++;
 									break;
 								}
 							}
-							if(r=resultadoo)
-							{
-								printf("continuando calculo...\n");
-								system("pause");
-							}	
 						}
 					}
 				break;	
@@ -227,11 +235,8 @@ int main(int argc, char *argv[])
 					break;
 				}
 			}
-			
 		}
-		
-		
-	}while(op!=0);
+	}while(op!=5);
 	
 return 0;
 }
