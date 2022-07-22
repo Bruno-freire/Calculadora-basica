@@ -14,12 +14,12 @@ int main(int argc, char *argv[])
     	system("cls");
    		printf("----------CALCULADORA----------\t\n Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR   5 para Encerrar.  \n");
     	scanf(" %d", &op);
-    
+		    
     	switch(op)
     	{
     	    case 1:
-    	    {
-    	    	
+    	    {	
+    	    	c=0;
     	    	printf("\nSomando...\n\n");
     	    	printf("Digite o primeiro numero: ");
     			scanf(" %f", &x);
@@ -28,17 +28,17 @@ int main(int argc, char *argv[])
     	        r=x+y;
     	        	if(fmod(r, 2)==0)
 					{
-    	        		printf("Resultado %.0f\n", r);
+    	        		printf("\nResultado %.0f\n", r);
 					}
 					else
 					{
-						printf("Resultado %.2f\n", r);
+						printf("\nResultado %.2f\n", r);
 					}
 	            break;
 	        }
 	        case 2:
 	        {
-	        	
+	        	c=0;
 	        	printf("\nSubtraindo...\n\n");
 	        	printf("Digite o primeiro numero: ");
 	    		scanf(" %f", &x);
@@ -47,17 +47,17 @@ int main(int argc, char *argv[])
 	            r=x-y;
 	            		if(fmod(r, 2)==0)
 					{
-	            		printf("Resultado %.0f\n", r);
+	            		printf("\nResultado %.0f\n", r);
 					}
 					else
 					{
-						printf("Resultado %.2f\n", r);
+						printf("\nResultado %.2f\n", r);
 					}
 				break;
 	        }
 	        case 3:
 	        {
-	        	
+	        	c=0;
 	        	printf("\nMultiplicando...\n\n");
 	        	printf("Digite o primeiro numero: ");
 	    		scanf(" %f", &x);
@@ -66,17 +66,17 @@ int main(int argc, char *argv[])
 	            r=x*y;
 	            	if(fmod(r, 2)==0)
 					{
-	            		printf("Resultado %.0f\n", r);
+	            		printf("\nResultado %.0f\n", r);
 					}
 					else
 					{
-						printf("Resultado %.2f\n", r);
+						printf("\nResultado %.2f\n", r);
 					}
 				break;
 	        }
 	        case 4:
 	        {
-	        	
+	        	c=0;
 	        	printf("\nDividindo...\n\n");
 	        	printf("Digite o primeiro numero: ");
 	    		scanf(" %f", &x);
@@ -85,11 +85,11 @@ int main(int argc, char *argv[])
 	            r=x/y;
 	            	if(fmod(r, 2)==0)
 					{
-	            		printf("Resultado %.0f\n", r);
+	            		printf("\nResultado %.0f\n", r);
 					}
 					else
 					{
-						printf("Resultado %.2f\n", r);
+						printf("\nResultado %.2f\n", r);
 					}
 	            break;
 	        }
@@ -119,6 +119,7 @@ int main(int argc, char *argv[])
 	        	{
 	        		while(n!=1)
 					{
+						c2=0;
 						system("cls");
 						int op2;
 						printf("----------CALCULADORA----------\t\nValor atual: %.2f Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR  5 para Encerrar\n", resultado2);
@@ -131,13 +132,13 @@ int main(int argc, char *argv[])
 	    		    		printf("%.2f+", resultado2);
 	   			 			scanf(" %f", &y);
 	        		    	resultado2=resultado2+y;
-	            			if(fmod(r, 2)==0)
+	            			if(fmod(resultado2, 2)==0)
 							{
-	            				printf("Novo resultado %.0f\n", resultado2);
+	            				printf("\nNovo resultado %.0f\n", resultado2);
 							}
 							else
 							{
-								printf("Novo resultado %.2f\n", resultado2);
+								printf("\nNovo resultado %.2f\n", resultado2);
 							}
 	            			break;
 	        			}
@@ -147,13 +148,13 @@ int main(int argc, char *argv[])
 	        				printf("%.2f-", resultado2);
 	    					scanf(" %f", &y);
 	        			    resultado2=resultado2-y;
-	        		   		if(fmod(r, 2)==0)
+	        		   		if(fmod(resultado2, 2)==0)
 							{
-	          			  		printf("Novo resultado %.0f\n", resultado2);
+	          			  		printf("\nNovo resultado %.0f\n", resultado2);
 							}
 							else
 							{
-								printf("Novo resultado %.2f\n", resultado2);
+								printf("\nNovo resultado %.2f\n", resultado2);
 							}
 						break;
 	        			}
@@ -163,13 +164,13 @@ int main(int argc, char *argv[])
 	       					printf("%.2f*", resultado2);
 	       					scanf(" %f", &y);
 	      				    resultado2=resultado2*y;
-	        		    	if(fmod(r, 2)==0)
+	        		    	if(fmod(resultado2, 2)==0)
 							{
-	        		    		printf("Novo resultado %.0f\n", resultado2);
+	        		    		printf("\nNovo resultado %.0f\n", resultado2);
 							}
 							else
 							{
-								printf("Novo resultado %.2f\n", resultado2);
+								printf("\nNovo resultado %.2f\n", resultado2);
 							}
 						break;
 	      				 }
@@ -179,13 +180,13 @@ int main(int argc, char *argv[])
 	        				printf("%.2f/", resultado2);
 	    					scanf(" %f", &y);
 	            			resultado2=resultado2/y;
-	            			if(fmod(r, 2)==0)
+	            			if(fmod(resultado2, 2)==0)
 							{
-	            				printf("Novo resultado %.0f\n", resultado2);
+	            				printf("\nNovo resultado %.0f\n", resultado2);
 							}
 							else
 							{
-								printf("Novo resultado %.2f\n", resultado2);
+								printf("\nNovo resultado %.2f\n", resultado2);
 							}
 	         		   	break;
 	         		   	case 5:
@@ -208,7 +209,7 @@ int main(int argc, char *argv[])
 						}
 						if(c2==0)
 						{
-							printf("voce quer continuar calculando com o resultado anterior? s ou n\n");
+							printf("\nvoce quer continuar calculando com o resultado anterior? s ou n\n");
 							scanf(" %c", &resultado3);
 							switch(resultado3)
 							{
