@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	{
     	system("color 0f");
     	system("cls");
-   		printf("----------CALCULADORA----------\t\n Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR\n   5 para Encerrar.  ");
+   		printf("----------CALCULADORA----------\t\n Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR   5 para Encerrar.  \n");
     	scanf(" %d", &op);
     
     	switch(op)
@@ -121,7 +121,7 @@ int main(int argc, char *argv[])
 					{
 						system("cls");
 						int op2;
-						printf("----------CALCULADORA----------\t\nValor atual: %.2f Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR\n  5 para Encerrar\n", resultado2);
+						printf("----------CALCULADORA----------\t\nValor atual: %.2f Escolha; \n1 para SOMAR	2 para SUBTRAIR 	3 para MULTIPLICAR	4 para DIVIDIR  5 para Encerrar\n", resultado2);
 	    				scanf(" %d", &op2);
 	    				switch(op2)
 	    				{
