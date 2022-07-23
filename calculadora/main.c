@@ -233,6 +233,7 @@ int main(int argc, char *argv[])
 				{
 					printf("Reiniciando a calculadora..\n");
 					system("pause");
+					system("cls");
 					break;
 				}
 			}
