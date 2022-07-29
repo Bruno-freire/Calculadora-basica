@@ -82,6 +82,13 @@ int main(int argc, char *argv[])
 	    		scanf(" %f", &x);
 	    		printf("Digite o segundo numero: ");
 	    		scanf(" %f", &y);
+	    		if(y == 0)
+	            	{
+	            		printf("\nNão é possivel dividir por 0.\n\n");
+	            		c=c+1;
+	            		system("pause");
+	            		break;
+					}
 	            r=x/y;
 	            	if(fmod(r, 2)==0)
 					{
@@ -179,6 +186,13 @@ int main(int argc, char *argv[])
 	       					printf("\nDividindo...\n\n");
 	        				printf("%.2f/", resultado2);
 	    					scanf(" %f", &y);
+	    					if(y == 0)
+	            			{
+	            				printf("\nNão é possivel dividir por 0.\n\n");
+	            				c2=c2+1;
+	            				system("pause");
+	            				break;
+	            			}
 	            			resultado2=resultado2/y;
 	            			if(fmod(resultado2, 2)==0)
 							{
